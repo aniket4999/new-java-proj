@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.12-SNAPSHOT</version>
+		<version>3.6.5</version>
 		<relativePath/> <!-- lookup parent from repository. -->
 	</parent>
 	<groupId>com.demo</groupId>
@@ -63,8 +63,11 @@
 	</build>
 	<repositories>
     <repository>
-        <id>vmware-repo</id>
-        <url>https://repo.spring.io/release</url>
+        <id>spring-snapshots</id>
+        <url>https://repo.spring.io/snapshot</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
     </repository>
 </repositories>
 	<pluginRepositories>
