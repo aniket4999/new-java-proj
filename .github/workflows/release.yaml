@@ -1,0 +1,29 @@
+name: Release Pipeline
+
+on:
+  pull_request:
+    branches:
+      - release
+
+jobs:
+
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - run: mvn clean package
+
+      - name: Build Docker Image
+        run: docker build -t cicd-demo .
+
+      - name: Simulated Staging Deploy
+        run: echo "Deploying to STAGING"
