@@ -6,12 +6,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Spring Boot Parent -->
+    <!-- Use Spring Boot parent POM from Maven Central -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.6.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from Maven Central -->
     </parent>
 
     <groupId>com.demo</groupId>
@@ -25,13 +25,13 @@
     </properties>
 
     <dependencies>
-        <!-- Web starter -->
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- VMware governance starter -->
+        <!-- VMware governance dependency -->
         <dependency>
             <groupId>com.vmware.tanzu.spring.governance</groupId>
             <artifactId>governance-starter</artifactId>
@@ -62,19 +62,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- Only include VMware repository if needed -->
-    <repositories>
-        <repository>
-            <id>tanzu-releases</id>
-            <url>https://repo.spring.io/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
