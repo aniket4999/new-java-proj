@@ -71,6 +71,12 @@
 			</releases>
 		</repository>
 	</repositories>
+	<repositories>
+    <repository>
+        <id>vmware-repo</id>
+        <url>https://repo.spring.io/release</url>
+    </repository>
+</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-snapshots</id>
