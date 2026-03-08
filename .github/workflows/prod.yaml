@@ -22,5 +22,5 @@ jobs:
 
       - run: mvn clean package
 
-      - name: Production Deploy
+      - name: Production Deployy
         run: echo "Deploying to PRODUCTION 🚀"

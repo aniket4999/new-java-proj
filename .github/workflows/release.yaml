@@ -22,7 +22,7 @@ jobs:
 
       - run: mvn clean package
 
-      - name: Build Docker Image
+      - name: Build Docker Images
         run: docker build -t cicd-demo .
 
       - name: Simulated Staging Deploy
