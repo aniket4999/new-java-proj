@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Spring Boot Parent POM -->
+    <!-- Spring Boot Parent -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -31,7 +31,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- VMware Tanzu governance starter -->
+        <!-- VMware governance starter -->
         <dependency>
             <groupId>com.vmware.tanzu.spring.governance</groupId>
             <artifactId>governance-starter</artifactId>
@@ -63,11 +63,10 @@
         </plugins>
     </build>
 
-    <!-- Repositories for resolving dependencies -->
+    <!-- Only include VMware repository if needed -->
     <repositories>
-        <!-- Release repository for VMware Tanzu artifacts -->
         <repository>
-            <id>spring-releases</id>
+            <id>tanzu-releases</id>
             <url>https://repo.spring.io/release</url>
             <releases>
                 <enabled>true</enabled>
@@ -77,19 +76,5 @@
             </snapshots>
         </repository>
     </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <name>Spring Releases</name>
-            <url>https://repo.spring.io/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 
 </project>
